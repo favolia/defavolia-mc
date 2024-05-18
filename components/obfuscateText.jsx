@@ -18,7 +18,7 @@ const obfuscateText = (originalText) => {
     return obfuscatedText;
 };
 
-const ObfuscateText = ({ text, interval = 100, className }) => {
+const ObfuscateText = ({ text, interval = 100, className, duration }) => {
     const [obfuscatedText, setObfuscatedText] = useState(text);
 
     useEffect(() => {
@@ -26,8 +26,20 @@ const ObfuscateText = ({ text, interval = 100, className }) => {
             setObfuscatedText(obfuscateText(text));
         }, interval);
 
-        return () => clearInterval(timer); // Cleanup interval on component unmount
-    }, [text, interval]);
+        if (duration !== undefined) {
+            const timeout = setTimeout(() => {
+                clearInterval(timer);
+                setObfuscatedText(text);
+            }, duration);
+
+            return () => {
+                clearInterval(timer);
+                clearTimeout(timeout);
+            };
+        }
+
+        return () => clearInterval(timer);
+    }, [text, interval, duration]);
 
     return <span className={cn('font-minecraft_text', className)} style={{ whiteSpace: 'pre' }}>{obfuscatedText}</span>;
 };
