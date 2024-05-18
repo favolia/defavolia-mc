@@ -1,8 +1,8 @@
 import Banner from "@/components/Banner";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
-import Support from "@/components/Support";
 import Nav from "@/components/Nav";
+import Support from "@/components/Support";
 import dynamic from "next/dynamic";
 
 /**
