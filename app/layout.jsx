@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} ${minecraft.variable} ${minecraft_text.variable} ${enchant.variable}`}>
+        <Toaster richColors />
         {children}
       </body>
     </html>
