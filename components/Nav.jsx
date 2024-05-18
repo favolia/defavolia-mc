@@ -3,8 +3,8 @@ import Link from 'next/link'
 import ObfuscateText from './obfuscateText';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { showToast } from '@/lib/showToast';
 import { useRef } from "react";
+import { showToast } from './Support';
 
 const Nav = () => {
 
@@ -27,7 +27,6 @@ const Nav = () => {
             y: 80,
         }, {
             y: 0,
-            delay: 2.3,
             duration: 1,
             opacity: 100
         })
@@ -36,7 +35,6 @@ const Nav = () => {
             x: 80,
         }, {
             x: 0,
-            delay: 2.5,
             duration: 1,
             opacity: 100
         })
