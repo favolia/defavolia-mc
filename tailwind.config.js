@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -17,6 +19,10 @@ module.exports = {
       },
     },
     extend: {
+      textShadow: {
+        minecraft: '3px 3px #4C4C4C',
+        'minecraft-small': '2px 2px #4C4C4C'
+      },
       fontFamily: {
         minecraft: ['var(--font-minecraft)'],
         minecraft_text: ['var(--font-minecraft_text)'],
@@ -78,5 +84,17 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 }
