@@ -8,7 +8,7 @@ const Footer = () => {
     const [isMouseOverIg, setIsMouseOverIg] = useState(false);
 
     return (
-        <footer className=" rounded-lg shadow dark:bg-gray-900">
+        <footer className="">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <div className='font-minecraft text-lg text-green-600'>
@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
                 <Separator className="my-4 bg-muted-foreground/20" />
                 <span className="block font-minecraft_text text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                    © 2023{" "}
+                    © 2024{" "}
                     <span className="cursor-pointer" onMouseOver={() => setIsMouseOverIg(true)} onMouseOut={() => setIsMouseOverIg(false)}>
                         {
                             isMouseOverIg

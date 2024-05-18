@@ -38,16 +38,16 @@ const Banner = () => {
     }, [])
 
     return (
-        <div className="relative text-center sm:text-left">
+        <div className="relative text-center md:text-left">
             <div className="overflow-hidden">
-                <div className="font-minecraft relative inline-block text-4xl sm:text-6xl">
+                <div className="font-minecraft relative inline-block text-4xl sm:text-5xl md:text-6xl">
                     <span className="overflow-hidden inline-block text-green-600">
                         <div id="title_banner1">
                             Minecraft
                         </div>
                     </span>
                     {" "}
-                    <span className="overflow-hidden inline-block text-black">
+                    <span className="overflow-hidden inline-block text-black hover:text-purple-700 transition">
                         <div id="title_banner2">
                             3D Preview
                         </div>
@@ -55,8 +55,8 @@ const Banner = () => {
                 </div>
             </div>
 
-            <div className="overflow-hidden sm:w-fit" onMouseOver={() => setIsMouseOverIg(true)} onMouseOut={() => setIsMouseOverIg(false)}>
-                <p id="description_banner" className="pl-1 text-xs sm:text-lg font-minecraft_text text-muted-foreground">
+            <div className="overflow-hidden md:w-fit" onMouseOver={() => setIsMouseOverIg(true)} onMouseOut={() => setIsMouseOverIg(false)}>
+                <p id="description_banner" className="pl-1 text-xs sm:text-base md:text-lg font-minecraft_text text-muted-foreground">
                     Lazy Project By{" "}
                     <span className="cursor-pointer">
                         {
