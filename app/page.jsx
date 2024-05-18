@@ -31,7 +31,7 @@ const CowScene = dynamic(() => import("@/components/threeScene/cowScene"), {
 export default function Home() {
 
   return (
-    <div className="bg-gradient-to-t sm:bg-gradient-to-t from-60% from-green-100 to-white">
+    <div className="bg-gradient-to-t sm:bg-gradient-to-t from-60% from-green-50 to-white">
       <main className="w-full min-h-screen flex flex-col justify-start items-center pb-16">
         <Nav />
         <div className="w-fit min-h-[90vh] flex flex-col pt-48 pb-20 gap-y-36 justify-center items-center">
