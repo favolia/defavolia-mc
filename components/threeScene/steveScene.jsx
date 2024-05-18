@@ -3,7 +3,6 @@ import { Canvas, useThree } from '@react-three/fiber'
 import React, { Suspense } from 'react'
 import Model from './Model';
 import { useProgress, Html, ScrollControls, OrbitControls } from '@react-three/drei';
-import { LuCircleDashed } from "react-icons/lu";
 
 function Loader() {
     const { progress, active } = useProgress()

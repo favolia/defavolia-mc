@@ -11,19 +11,19 @@ function Loader() {
     </Html>
 }
 
-const SteveScene = () => {
+const SheepScene = () => {
     return (
-        <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} >
+        <Canvas gl={{ antialias: true }} dpr={[1, 1.5]}>
             <Suspense fallback={<Loader />}>
                 <ScrollControls damping={0.2} pages={0} >
                     <OrbitControls makeDefault autoRotate maxPolarAngle={Math.PI} enablePan={false} enableRotate={true} enableZoom={false} />
-                    <ambientLight intensity={0.7} />
+                    <ambientLight intensity={1} />
                     <directionalLight position={[2, 1, 1]} />
-                    <Model path='/3d/model/mob/creeper.glb' />
+                    <Model path='/3d/model/mob/sheep.glb' scale={0.176} />
                 </ScrollControls>
             </Suspense>
         </Canvas>
     )
 }
 
-export default SteveScene
+export default SheepScene
